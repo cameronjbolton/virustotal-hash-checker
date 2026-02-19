@@ -17,6 +17,7 @@ with open('hashes.csv', newline='') as csvfile:
         hashes.append(row[0])
 
 # Query VirusTotal for each hash
+# https://docs.virustotal.com/reference/file-info
 for hash in hashes:
     url = "https://www.virustotal.com/api/v3/files/{hash}"
     headers = {
