@@ -21,8 +21,8 @@ with open('hashes.csv', newline='') as csvfile:
 for hash in hashes:
     url = "https://www.virustotal.com/api/v3/files/{hash}"
     headers = {
-    "accept": "application/json",
-    "x-apikey": virustotal_api_key
+        "accept": "application/json",
+        "x-apikey": virustotal_api_key
     }
     response = requests.get(url.format(hash=hash), headers=headers)
     print(response.text)
